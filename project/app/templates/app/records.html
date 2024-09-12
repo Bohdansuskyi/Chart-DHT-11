@@ -1,0 +1,31 @@
+{% extends "app/base.html" %}
+
+{% block title %} Records {% endblock %}
+
+{% block content %}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Number</th>
+            <th scope="col">Date</th>
+            <th scope="col">Temperature</th>
+            <th scope="col">Humidity</th>
+        </tr>
+        <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>12.09.2024 12:21:21</td>
+              <td>25C</td>
+              <td>80%</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>12.09.2024 12:25:41</td>
+                <td>22C</td>
+                <td>62%</td>
+              </tr>
+        </tbody>
+    </thead>
+  </table>
+{% endblock %}

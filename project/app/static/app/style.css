@@ -1,3 +1,20 @@
 h1 {
-    color:red
+    text-align: center;
+}
+
+body {
+    background-color: aliceblue;
+    margin: auto;
+}
+
+.canvas-container {
+    display: flex;
+    justify-content: center;  /* Вирівнювання по горизонталі */
+    height: 300px;       /* Висота контейнера для центрування по вертикалі */
+}
+
+canvas {
+    width: 90%;   /* Ширина графіка 80% від контейнера */
+    max-width: 700px;  /* Максимальна ширина графіка */
+    height: 100px; /* Фіксована висота графіка */
 }
