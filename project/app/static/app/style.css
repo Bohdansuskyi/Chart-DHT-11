@@ -13,14 +13,11 @@ body {
 
 .canvas-container {
     display: flex;
-    justify-content: center;  /* Вирівнювання по горизонталі */
-    height: 300px;       /* Висота контейнера для центрування по вертикалі */
+    justify-content: center;
+    margin-bottom: 20px; /* Відступ між графіками */
 }
-
 canvas {
-    width: 90%;   /* Ширина графіка 80% від контейнера */
-    max-width: 700px;  /* Максимальна ширина графіка */
-    height: 100px; /* Фіксована висота графіка */
+    max-width: 80%; /* Налаштувати ширину графіка */
 }
 
 .container {
