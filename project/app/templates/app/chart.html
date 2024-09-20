@@ -1,0 +1,43 @@
+{% extends "app/base.html" %}
+
+{% block title %} Graph {% endblock %}
+
+{% block content %}
+
+<div>
+    <h1>Temperature Chart</h1>
+</div>
+
+<div class="canvas-container">
+    <canvas id="myChart"></canvas>  
+</div>
+
+
+    <!-- chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      
+      const ctx = document.getElementById('myChart').getContext('2d');
+
+      
+      const myChart = new Chart(ctx, {
+          type: 'line', // Тип графіка (лінійний)
+          data: {
+              labels: ['January', 'February', 'March', 'April', 'May', 'June'], // Мітки по осі X
+              datasets: [{
+                  label: 'Temperature', // Назва набору даних
+                  data: [12, 19, 3, 5, 2, 3], // Дані по осі Y
+                  borderColor: 'rgba(75, 192, 192, 1)', // Колір лінії
+                  borderWidth: 2 // Товщина лінії
+              }]
+          },
+          options: {
+              scales: {
+                  y: {
+                      beginAtZero: true // Починати шкалу Y з 0
+                  }
+              }
+          }
+      });
+  </script>
+{% endblock %}

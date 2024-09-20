@@ -1,7 +1,11 @@
 h1 {
     text-align: center;
+    font-family: Playpen Sans;
 }
 
+h2 {
+    font-family: Raleway;
+}
 body {
     background-color: aliceblue;
     margin: auto;
@@ -17,4 +21,8 @@ canvas {
     width: 90%;   /* Ширина графіка 80% від контейнера */
     max-width: 700px;  /* Максимальна ширина графіка */
     height: 100px; /* Фіксована висота графіка */
+}
+
+.container {
+    padding-top: 30px;
 }
