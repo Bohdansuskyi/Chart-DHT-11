@@ -9,16 +9,13 @@
         <h1>Hi there!</h1>
     </div>
     <div class="container">
-        <h2>Temperature: x</h2>
+        <h2>Temperature:{{ temperature_data }}°C</h2>
     </div>
     <div class="container">
-        <h2>Humidity: x</h2>
+        <h2>Humidity:{{ humidity_data }}%</h2>
     </div>
     <div class="container">
-        <h2>Time of measurement: x</h2>
+        <h2>Time of measurement:{{ data_time }}</h2>
     </div>
-</div>
-<div class="container text-center">
-    <h2> Device:</h2>
 </div>
 {% endblock %}
