@@ -47,13 +47,11 @@ class InformationListCreate(generics.ListCreateAPIView):
     queryset = Information.objects.all()
     serializer_class = InformationSerializer
 
-    def delete():
-        Information.objects.all().delete()
-        return Response(status.HTTP_204_NO_CONTENT)
-
-class InformationRetrieveUpdateDestory(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Information.objects.all()
-    serializer_class = InformationSerializer
-    lookup_field = "pk"
-
-    
+class InformationCreateView(APIView):
+    def post(self, request):
+        print(request.data)  # Logging the request for debugging
+        serializer = InformationSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
