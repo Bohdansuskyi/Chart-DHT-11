@@ -55,3 +55,26 @@ class InformationCreateView(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    def get(self, request):
+        # Get the parameters from the URL
+        temperature = request.GET.get('temperature')
+        humidity = request.GET.get('humidity')
+
+        if temperature and humidity:
+            # Logic for data processing
+            data = {
+                'temperature': temperature,
+                'humidity': humidity
+            }
+
+          
+            serializer = InformationSerializer(data=data)
+            
+            if serializer.is_valid():
+                serializer.save()  # Save the data to the database
+                return Response(serializer.data, status=status.HTTP_201_CREATED)
+            else:
+                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        
+        return Response({"error": "Temperature and humidity are required."}, status=status.HTTP_400_BAD_REQUEST)
