@@ -1,5 +1,5 @@
 # DHT11 Sensor Data Transmission to Django REST API
-Overview
+
 This project demonstrates how to send data from a DHT11 temperature and humidity sensor using a NodeMCU v3 board to a Django application deployed on PythonAnywhere. The Django REST Framework is utilized to facilitate the API communication.
 
 #### Requirements
