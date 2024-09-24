@@ -2,13 +2,13 @@
 from django.shortcuts import render
 from .models import Information
 
-#django rest_framework
+#django rest_framework (API)
 from rest_framework import generics, status
 from rest_framework.response import Response
 from .serializers import InformationSerializer
 from rest_framework.views import APIView
 
-# views for templates
+# views for templates (index.html, chart.html)
 def index(request):
 
     data = Information.objects.last()
@@ -42,22 +42,26 @@ def chart(request):
         'humidity_data':humidity_data
     })
 
-# API POST
+# API
+
 class InformationListCreate(generics.ListCreateAPIView):
     queryset = Information.objects.all()
     serializer_class = InformationSerializer
 
 class InformationCreateView(APIView):
+
+    # POST does not used in project
     def post(self, request):
-        print(request.data)  # Logging the request for debugging
+        print(request.data)  
         serializer = InformationSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
+    # GET get the parameters from the URL
     def get(self, request):
-        # Get the parameters from the URL
+        
         temperature = request.GET.get('temperature')
         humidity = request.GET.get('humidity')
 

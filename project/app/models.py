@@ -1,5 +1,6 @@
 from django.db import models
 
+# models for creating database
 class Information(models.Model):
     temperature = models.FloatField()
     humidity = models.FloatField()
