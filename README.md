@@ -17,3 +17,13 @@ You may use another version, but it is recommended to use Python 3.9 and newer.
 
 ### Deploy Django Project
 [You can learn how to deploy a Django project in this video](https://youtu.be/xtnUwvjOThg?si=O-7C6Hsz7lhh11IP)
+
+# Photo
+## Homepage of the website
+![20240924_150150](https://github.com/user-attachments/assets/e1abd510-acd1-4f8a-bc3f-ac823ffcdca8)
+
+## Page with graph
+![20240924_151343](https://github.com/user-attachments/assets/1fdda986-6ffd-4f95-8782-8471152f14bd)
+
+# Drawback
+One disadvantage is that the measurement time is recorded in GMT instead of the time zone.
