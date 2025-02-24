@@ -1,3 +1,12 @@
+# Projekt IoT: NodeMCU v3 z czujnikiem DHT11 do przesyłania danych do Django REST API
+Projekt demonstruje, jak przesyłać dane z czujnika temperatury i wilgotności DHT11 za pomocą płytki NodeMCU v3 do aplikacji Django wdrożonej na PythonAnywhere. Django REST Framework jest używany do uproszczenia komunikacji API. Dane dotyczące temperatury i wilgotności są również wyświetlane na wykresach (chart.js).
+### Funkcje
+- Przesyłanie danych z czujnika DHT11 w czasie rzeczywistym (z opóźnieniem).
+- RESTful API do obsługi danych.
+- Łatwa integracja z urządzeniami IoT przy użyciu NodeMCU
+### Wada
+Jednym z minusów jest to, że czas pomiaru jest zapisywany w formacie GMT zamiast w lokalnej strefie czasowej.
+_____________________________________________________________________________________________________________________________
 # IoT Project: NodeMCU v3 with DHT11 Sensor for Data Transmission to Django REST API
 
  This project demonstrates how to send data from a DHT11 temperature and humidity sensor using a NodeMCU v3 board to a Django application deployed on PythonAnywhere. The Django REST Framework is used to simplify API communication. Temperature and humidity data are also displayed using graphs (chart.js).
